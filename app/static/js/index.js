@@ -88,7 +88,7 @@ async function onloadGroups() {
   let groups = await getGroups();
   for (let i of groups) {
     let a = Object.assign(document.createElement('a'), { className: 'search-list-element', textContent: `${i.name}-${i.year}-${i.base}-${i.number}` });
-    a.href = `${FRONT_URL}/tiy_vizor_frontend/app/schedule.html?dispatcher=${i.dispatcher_id}&group=${i.id}&name=${i.name}-${i.year}-${i.base}-${i.number}`;
+    a.href = `/schedule?dispatcher=${i.dispatcher_id}&group=${i.id}&name=${i.name}-${i.year}-${i.base}-${i.number}`;
     SEARCHS[0].appendChild(a);
   }
 }
@@ -100,7 +100,7 @@ async function onloadTeachers() {
       continue;
     } else {
       let a = Object.assign(document.createElement('a'), { className: 'search-list-element', textContent: `${i.name}` });
-      a.href = `${FRONT_URL}/tiy_vizor_frontend/app/teachers.html?teacher_id=${i.id}&name=${i.name}`;
+      a.href = `/teachers?teacher_id=${i.id}&name=${i.name}`;
       SEARCHS[1].appendChild(a);
     }
   }
@@ -109,10 +109,10 @@ async function onloadTeachers() {
 async function onloadCabinets() {
   let cabinets = await getCabinets();
   for (let i of cabinets) {
-    let multimedia = i.is_multimedia ? 'м': '';
-    let computer = i.is_computer ? 'к': '';
+    let multimedia = i.is_multimedia ? 'м' : '';
+    let computer = i.is_computer ? 'к' : '';
     let a = Object.assign(document.createElement('a'), { className: 'search-list-element', textContent: `${i.number}${multimedia}${computer} (${i.corps} корпус)` });
-    a.href = `${FRONT_URL}/tiy_vizor_frontend/app/cabinets.html?cabinet_id=${i.id}&name=${i.number}&corps=${i.corps}`;
+    a.href = `/cabinets?cabinet_id=${i.id}&name=${i.number}&corps=${i.corps}`;
     SEARCHS[2].appendChild(a);
   }
 }
