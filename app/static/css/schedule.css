@@ -22,6 +22,10 @@ header {
     align-items: center;
 }
 
+.header-item {
+
+}
+
 .header-logo {
     padding-left: 15px;
 }
@@ -45,6 +49,23 @@ header {
 .header-vk img {
     border-radius: 10px;
     height: 48px;
+}
+
+.br-media {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .br-media {
+        display: initial;
+    }
+    .header-item {
+        padding-inline: 5px;
+        text-align: center;
+    }
+    .header-vk {
+        padding-inline: 0;
+    }
 }
 
 table {
