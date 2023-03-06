@@ -100,7 +100,7 @@ async function onloadTeachers() {
       continue;
     } else {
       let a = Object.assign(document.createElement('a'), { className: 'search-list-element', textContent: `${i.name}` });
-      a.href = `/teachers?teacher_id=${i.id}&name=${i.name}`;
+      a.href = `/teacher?teacher_id=${i.id}&name=${i.name}`;
       SEARCHS[1].appendChild(a);
     }
   }
@@ -112,7 +112,7 @@ async function onloadCabinets() {
     let multimedia = i.is_multimedia ? 'м' : '';
     let computer = i.is_computer ? 'к' : '';
     let a = Object.assign(document.createElement('a'), { className: 'search-list-element', textContent: `${i.number}${multimedia}${computer} (${i.corps} корпус)` });
-    a.href = `/cabinets?cabinet_id=${i.id}&name=${i.number}&corps=${i.corps}`;
+    a.href = `/cabinet?cabinet_id=${i.id}&name=${i.number}&corps=${i.corps}`;
     SEARCHS[2].appendChild(a);
   }
 }
