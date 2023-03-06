@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" type="image/x-icon" href="./static/img/logopurple.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-item">
+            <a href="./index.html" class="header-logo"><img src="./static/img/GradientLogo.png" alt=""></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="wrapper" id="wrapper-1">
+            <div class="wrapper-button" id="button-1">
+                <span>Выберите группу</span>
+                <i class="ri-arrow-down-s-line wrapper-button-arrow"></i>
+            </div>
+            <div class="wrapper-content">
+                <div class="search">
+                    <div class="searchbar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" class="search-input" placeholder="Поиск" id="search-1"
+                            onkeyup="filterPairs()">
+                    </div>
+                    <div class="search-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" id="wrapper-2">
+            <div class="wrapper-button" id="button-2">
+                <span>Выберите преподавателя</span>
+                <i class="ri-arrow-down-s-line wrapper-button-arrow"></i>
+            </div>
+            <div class="wrapper-content">
+                <div class="search">
+                    <div class="searchbar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" class="search-input" placeholder="Поиск" id="search-2"
+                            onkeyup="filterTeachers()">
+                    </div>
+                    <div class="search-list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" id="wrapper-3">
+            <div class="wrapper-button" id="button-3">
+                <span>Выберите кабинет</span>
+                <i class="ri-arrow-down-s-line wrapper-button-arrow"></i>
+                <!-- <span class="wrapper-button-arrow"></span> -->
+            </div>
+            <div class="wrapper-content">
+                <div class="search">
+                    <div class="searchbar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" class="search-input" placeholder="Поиск" id="search-3"
+                            onkeyup="filterCabinets()">
+                    </div>
+                    <div class="search-list">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a class="calendar-shed" href="http://mnokol.tyuiu.ru/rtsp/shedule/show_shedule.php?action=show_graph&count=8&shed[0]=272&union[0]=0&shed[1]=267&union[1]=0&shed[2]=265&union[2]=0&shed[3]=266&union[3]=0&shed[4]=268&union[4]=0&shed[5]=271&union[5]=0&shed[6]=270&union[6]=0&shed[7]=273&union[7]=0">Календарный учебный год</a>
+        <br><br>
+        
+        <a href="https://play.google.com/store/apps/details?id=ru.gnomespear.pars" class="header-google"><img src="./static/img/google-play-badge.png" alt=""></a>
+        <a href="https://vk.com/gnomespear" class="header-vk"><img src="./static/img/VK_BW_Compact_Logo.png" alt=""></a>
+    </div>
+
+    <script src="./static/js/index.js"></script>
+</body>
+
+</html>
