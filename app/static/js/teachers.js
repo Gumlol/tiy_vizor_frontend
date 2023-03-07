@@ -28,6 +28,7 @@ async function fillTeachers() {
     let teachersData = await getTeachers(id);
     
     let pairs = document.querySelectorAll('.pars-all-name');
+    let teachers = document.querySelectorAll('.pars-all-fio');
     let cabinets = document.querySelectorAll('.pars-cabinet');
     let replace = document.querySelectorAll('.pars-replace');
     let allPairs = document.querySelectorAll('.pars-all');
@@ -38,6 +39,8 @@ async function fillTeachers() {
     for (let i = 0; i < teachersData.length; i++) {
         pairs[i].innerHTML = teachersData[i].name;
         cabinets[i].innerHTML = teachersData[i].cabinet;
+        teachers[i].innerHTML = teachersData[i].group;
+
 
         if (teachersData[i].is_replace) {
             replace[i].innerHTML = 'Замена';
